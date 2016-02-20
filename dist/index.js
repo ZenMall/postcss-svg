@@ -32,7 +32,7 @@
             console.time("Render svg " + name);
           }
           try {
-            svg = SVGCache.get(name);
+            svg = SVGCache.getRelative(decl.source.input.file, name);
           } catch (error1) {
             error = error1;
             if (silent) {
