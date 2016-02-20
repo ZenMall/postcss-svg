@@ -13,8 +13,8 @@
       options = {};
     }
     funcName = options.func || 'svg';
-    SVGRegExp = new RegExp(funcName + "\\(\"([^\"]+)\"(,\\s*\"([^\"]+)\")?\\)");
-    replaceRegExp = new RegExp(funcName + "\\((\"[^\"]+\"|\'[^\']+\')(,\\s*(\"[^\"]+\"|\'[^\']+\'))?\\)");
+    SVGRegExp = new RegExp(funcName + "\\(\"?([^\"]+)\"?(,\\s*\"([^\"]+)\")?\\)");
+    replaceRegExp = new RegExp(funcName + "\\((\"?[^\"]+\"?|\'?[^\']+\'?)(,\\s*(\"[^\"]+\"|\'[^\']+\'))?\\)");
     silent = _.isBoolean(options.silent) ? options.silent : true;
     if (options.debug) {
       silent = false;

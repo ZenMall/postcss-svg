@@ -135,7 +135,7 @@ pre.example:before {
 }
 
 .color:before {
-  background-image: svg("./loupe.svg", "[color]: red");
+  background-image: svg(./loupe.svg, "[color]: red");
 }
 
 .fill-stroke:before {
@@ -143,7 +143,7 @@ pre.example:before {
 }
 
 .tag-name:before {
-  background-image: svg("./loupe.svg", "circle[fill]: rgba(105, 200, 250, .2); circle[stroke]: gray; path[stroke]: brown;");
+  background-image: svg(./loupe.svg, "circle[fill]: rgba(105, 200, 250, .2); circle[stroke]: gray; path[stroke]: brown;");
 }
 
 .class-name:before {

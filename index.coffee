@@ -4,8 +4,8 @@ _ = require('lodash')
 
 module.exports = postcss.plugin "postcss-svg", (options = {}) ->
   funcName = options.func || 'svg'
-  SVGRegExp = new RegExp("#{funcName}\\(\"([^\"]+)\"(,\\s*\"([^\"]+)\")?\\)")
-  replaceRegExp = new RegExp("#{funcName}\\((\"[^\"]+\"|\'[^\']+\')(,\\s*(\"[^\"]+\"|\'[^\']+\'))?\\)")
+  SVGRegExp = new RegExp("#{funcName}\\(\"?([^\"]+)\"?(,\\s*\"([^\"]+)\")?\\)")
+  replaceRegExp = new RegExp("#{funcName}\\((\"?[^\"]+\"?|\'?[^\']+\'?)(,\\s*(\"[^\"]+\"|\'[^\']+\'))?\\)")
   silent = if _.isBoolean(options.silent) then options.silent else true
   silent = false if options.debug
 
